@@ -12,11 +12,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
 	.jumbotron { 
-  	background-color: #75b818; /* Orange */
+  	background-color: #2E3F53; /* Orange */
   	padding:180px 100px;
-  	font-family: Montserrat, sans-serif;
-  	color: #2E3F53;
+  	font-family: Montserrat, sans-serif;''
   	width: 100%;
+  	color: #FFFFFF;
+  	text-align: center;
 	}
 	body {
   font: 400 15px Lato, sans-serif;
@@ -61,7 +62,7 @@ h1 {
 
 
 .tiny-logo{
-	color: #2E3F53;	
+	color: #303030;	
 }
 .img-impro{
 	margin-top: 30px;
@@ -80,14 +81,39 @@ h1 {
     margin: 25px 0;
 
   }
+  .col-sm-12 {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 16px;
+
+  }
 }
 
-.btn-xl {
-    padding: 10px 20px;
-    font-size: 30px;
-    border-radius: 10px;
-    
-    } 
+
+
+    .btn {
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  color: #303030;
+  font-size: 30px;
+  border-radius: 0.1;
+  transition: .2s;
+}
+.btn:hover, .btn:focus {
+  border: 1px solid #FFFFFF;
+  background-color: #2E3F53;
+  color: #FFFFFF;
+}
+.modal-header, h4, .close {
+  background-color: #2E3F53;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-header, .modal-body {
+  padding: 40px 50px;
+}
 
 footer .glyphicon {
   font-size: 20px;
@@ -104,7 +130,40 @@ footer .glyphicon {
         </div>              
     </div> 
 </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4></span> ACESSAR SISTEMA</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usuário</label>
+            <input type="tex" class="form-control" id="usrname" >
+          </div>
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-lock"></span> Senha</label>
+            <input type="text" class="form-control" id="psw">
+          </div>
+          <button type="submit" class="btn btn-block">Login
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn  btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancel
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -112,7 +171,7 @@ footer .glyphicon {
 	 <div class="row">
         <div class=" col-md-12 text-center">
             <h1>Sistemas de Dados Estatísticos</h1>
-            <button type="button login" class="btn btn-default btn-xl">LOGIN</button>
+            <button type="button login" class="btn"  data-toggle="modal" data-target="#myModal">LOGIN</button>
         </div>              
     </div> 
 </div>
